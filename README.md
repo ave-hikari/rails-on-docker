@@ -1,24 +1,12 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+DockerでRails構築
 
-Things you may want to cover:
+- コントローラ作成
+$ docker-compose run --rm web rails generate controller Test example1 example2
 
-* Ruby version
+- migration
+$ docker-compose run --rm web rake db:migrate
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+- seed実行
+$ docker-compose run --rm web rake db:seed
